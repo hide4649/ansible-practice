@@ -1,0 +1,3 @@
+- httpd :
+  domain:
+    name:  test

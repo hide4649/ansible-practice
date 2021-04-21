@@ -1,0 +1,17 @@
+unix_users:
+  - {
+      name: "test_1",
+      uid: 2000,
+      state: "present",
+      comment: "User 1",
+      password: "{{ 'Tk6EaVDW' | password_hash('sha512') }}",
+      public_keys: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCpColpr610FSEOVPCzSlPB2KrGdbMFKDUQBmNZ0Pc8cACiiTzHQ/RMXUS0B+eOnI33sGXbmOOlOwkPqoS3MVa0TYQWaUJo8XcuUctRm76TD8TYP/jpQDB2OvRXh0YUbKJrRMxF7VEGMDPqDLHqoZ6lQnZfwSXEbQTh4WTkQBXKqOEkhMVnZqdR15L42TIxwYfhS16idbe93qI62HIXImjjLMYBzWDSZDK7Tbfniua+iwRcKbxEPPHp6elJF2yhVpGs4lBPGmlO/h6h5GTFAQ4Z3KRtldNp1a6G37tyC2J+gtGMRoQBngvrw216HhJbETTtOkAc+/ieKFhZ+LV0ebG9 hoge@provisioning"
+    }
+  - {
+      name: "test_2",
+      uid: 2001,
+      state: "present",
+      comment: "User 2",
+      password: "{{ 'T5wEAjKv' | password_hash('sha512') }}",
+      public_keys: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCpColpr610FSEOVPCzSlPB2KrGdbMFKDUQBmNZ0Pc8cACiiTzHQ/RMXUS0B+eOnI33sGXbmOOlOwkPqoS3MVa0TYQWaUJo8XcuUctRm76TD8TYP/jpQDB2OvRXh0YUbKJrRMxF7VEGMDPqDLHqoZ6lQnZfwSXEbQTh4WTkQBXKqOEkhMVnZqdR15L42TIxwYfhS16idbe93qI62HIXImjjLMYBzWDSZDK7Tbfniua+iwRcKbxEPPHp6elJF2yhVpGs4lBPGmlO/h6h5GTFAQ4Z3KRtldNp1a6G37tyC2J+gtGMRoQBngvrw216HhJbETTtOkAc+/ieKFhZ+LV0ebG9 hoge@provisioning"
+    }

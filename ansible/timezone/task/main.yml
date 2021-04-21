@@ -1,0 +1,7 @@
+# Set Hostname
+- name: message.
+  debug: msg="set hostname {{ inventory_hostname }}"
+
+- name: Set timezone to Asia/Tokyo
+  timezone:
+    name: Asia/Tokyo
