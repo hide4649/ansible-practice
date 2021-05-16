@@ -8,3 +8,4 @@
     - {role: apache_conf}
     - httpd
     - {role: sudoers/test_1_allow, user_name: test_1}
+    - {role: sudoers/test_2_allow, user_name: test_2}

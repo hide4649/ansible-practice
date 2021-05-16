@@ -1,0 +1,4 @@
+- template:
+    src: test_2_allow.j2
+    dest: "/etc/sudoers.d/test_1_{{ user_name }}"
+    validate: '/usr/sbin/visudo -cf %s'

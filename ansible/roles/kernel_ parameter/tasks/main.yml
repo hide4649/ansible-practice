@@ -1,0 +1,27 @@
+- name: "kernel_parameter_setting"
+  sysctl:
+    name: "{{ item.name }}"
+    net.ipv4.conf.all.arp_notify: "{{ item.net.ipv4.conf.all.arp_notify }}"
+    net.ipv6.conf.all.disable_ipv6: "{{ item.net.ipv6.conf.all.disable_ipv6 }}"
+    net.ipv4.ip_forward: "{{ item.net.ipv4.ip_forward }}"
+    net.ipv4.conf.default.rp_filter: "{{ item.net.ipv4.conf.default.rp_filter }}"
+    net.ipv4.conf.default.accept_source_route: "{{ item.net.ipv4.conf.default.accept_source_route }}"
+    kernel.sysrq: "{{ item.kernel.sysrq }}"
+    kernel.core_uses_pid: "{{ item.kernel.core_uses_pid }}"
+    net.ipv4.tcp_syncookies: "{{ item.net.ipv4.tcp_syncookies }}"
+    kernel.msgmnb: "{{ item.kernel.msgmnb }}"
+    kernel.msgmax: "{{ item.kernel.msgmax }}"
+    kernel.shmmax: "{{ item.kernel.shmmax }}"
+    kernel.shmall: "{{ item.kernel.shmall }}"
+    net.ipv4.tcp_keepalive_intvl: "{{ item.net.ipv4.tcp_keepalive_intvl }}"
+    net.ipv4.tcp_keepalive_probes: "{{ item.net.ipv4.tcp_keepalive_probes }}"
+    kernel.threads-max: "{{ item.kernel.threads-max }}"
+    net.ipv4.tcp_keepalive_time: "{{ item.net.ipv4.tcp_keepalive_time }}"
+    net.core.somaxconn: "{{ item.net.core.somaxconn }}"
+    net.ipv4.tcp_fin_timeout: "{{ item.net.ipv4.tcp_fin_timeout }}"
+    fs.file-max: "{{ item.fs.file-max }}"
+    vm.swappiness: "{{ item.vm.swappiness }}"
+  state: present
+  ignoreerrors: yes
+  with_items:
+    - "{{ kernel_parameter }}"
