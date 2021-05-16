@@ -1,12 +1,10 @@
 - hosts: sandbox
   become: yes
   become_user: root
-  tasks:
   roles:
     - hostname
     - timezone
     - unix_users
+    - {role: apache_conf}
     - httpd
     - {role: sudoers/test_1_allow, user_name: test_1}
-    - cron/yum_autoupdate
-    - samples/shell

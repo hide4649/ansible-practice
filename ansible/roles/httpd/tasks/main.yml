@@ -7,12 +7,3 @@
     name: httpd
     state: started
     enabled: yes
-
-- name: Set test.conf
-  template:
-    src: test.conf.j2
-    dest: /etc/httpd/conf.d/test.conf
-    owner: root
-    group: root
-    mode: 0644
-  notify: Restart httpd
